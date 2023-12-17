@@ -9,7 +9,7 @@ const {
   forgotPassword,
   resetPassword,
   updatePassword,
-} = require("../controllers/auth");
+} = require("../controller/auth");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 
 router.route("/login").post(login);
