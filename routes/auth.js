@@ -12,20 +12,19 @@ const {
 } = require("../controller/auth");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 
-router.route("/login").post(login);
+router.post("/login", login);
 
-router.route("/adminLogin").post(adminLogin);
+router.post("/adminLogin", adminLogin);
 
-router.route("/logout").get(logout);
+router.get("/logout", logout);
 
-// Create User
-router.route("/register").post(register);
+router.post("/register", register);
 
-// Update User Password
 router.post("/updatePassword", isAuthenticatedUser, updatePassword);
 
-router.route("/forgotpassword").post(forgotPassword);
-router.route("/resetpassword/:resetToken").put(resetPassword);
+router.post("/forgotpassword", forgotPassword);
+
+router.put("/resetpassword/:resetToken", resetPassword);
 
 
 module.exports = router;
