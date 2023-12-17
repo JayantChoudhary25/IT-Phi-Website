@@ -51,6 +51,12 @@ const PORT = process.env.PORT || 4000;
 const server = app.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
 );
+
+// Backend API is Running Msg 
+app.get("/", (req, res) => {
+  res.send("API is running..");
+});
+
 // DB error handler
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Log Error: ${err}`);
