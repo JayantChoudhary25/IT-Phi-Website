@@ -13,18 +13,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please Enter Lastname"],
     },
-    dob: {
-      type: String,
-    },
-    country: {
-      type: String,
-    },
-    language: {
-      type: String,
-    },
-    about: {
-      type: String,
-    },
     email: {
       type: String,
       required: [true, "Please Enter Email Address"],
@@ -45,29 +33,9 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "user",
     },
-    cart: {
-      type: Array,
-      default: [],
-    },
-    address: {
-      type: String,
-    },
-    shippingAddress: {
-      type: String,
-    },
-    wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
     refreshToken: {
       type: String,
     },
-    //temp
-    // orders: [
-    //   {
-    //     product: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-    //     orderStatus: { type: String, default: "Pending" },
-    //     paymentStatus: { type: String, default: "Pending" },
-    //   },
-    // ],
-    orders: [{ type: mongoose.Schema.Types.ObjectId, ref: "Order" }],
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,

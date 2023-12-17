@@ -39,8 +39,9 @@ app.use(express.urlencoded({ limit: "5mb", extended: true }));
 //     saveUninitialized: true,
 //   })
 // );
-// app.use("/api/auth", require("./routes/auth"));
-// app.use("/api/auth/upload", require("./routes/auth"));
+
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/enquiry", require("./routes/enquiry"));
 
 // Error Handler 
 app.use(errorHandler);
