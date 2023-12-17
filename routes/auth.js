@@ -3,7 +3,6 @@ const router = express.Router();
 
 const {
   register,
-  login,
   adminLogin,
   logout,
   forgotPassword,
@@ -11,8 +10,6 @@ const {
   updatePassword,
 } = require("../controller/auth");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
-
-router.post("/login", login);
 
 router.post("/adminLogin", adminLogin);
 
