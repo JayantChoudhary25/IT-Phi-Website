@@ -3,12 +3,12 @@ const validateMongoDbId = require("../utils/validateMongodbId");
 
 // Create a new enquiry
 exports.createEnquiry = async (req, res) => {
-  const { firstname, lastname, email, mobile, message } = req.body;
+  const { fName, lName, email, mobile, message } = req.body;
   
   try {
     const newEnquiry = await Enquiry.create({
-      firstname,
-      lastname,
+      fName,
+      lName,
       email,
       mobile,
       message,

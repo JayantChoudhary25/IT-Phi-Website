@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const EnquirySchema = new mongoose.Schema(
   {
-    firstname: {
+    fName: {
       type: String,
       required: [true, "Please Enter Firstname"],
     },
-    lastname: {
+    lName: {
       type: String,
       required: [true, "Please Enter Lastname"],
     },
